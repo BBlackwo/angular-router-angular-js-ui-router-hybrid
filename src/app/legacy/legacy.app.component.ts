@@ -6,7 +6,7 @@ legacyApp.component(LEGACY_APP_COMP_SELECTOR, {
   template: `
     <div class="comp ajs">
       <h2>Legacy App Component</h2>
+      <ui-view></ui-view>
     <div>
   `,
-  controller: () => console.log('Hello from Legacy App Controller'),
 });

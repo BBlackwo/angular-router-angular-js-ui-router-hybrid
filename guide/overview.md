@@ -14,22 +14,11 @@ npx @angular/cli new your-project-name
 
 See [Part 1](./part-1.md)
 
-## 2. Add Angular Router With Config
+## 2. Add UI Router With Config
 
-// ....
+See [Part 2](./part-2.md)
 
-## 3. Add UI Router With Config
-
-```sh
-npm install --save angular-ui-router
-```
-
-```ts
-import 'angular-ui-router';
-
-export const legacyApp = angular.module('legacyApp', ['ui.router']);
-```
-
+## 3. Add Angular Router With Config
 
 // ...
 
