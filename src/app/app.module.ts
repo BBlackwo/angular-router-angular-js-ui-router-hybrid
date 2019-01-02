@@ -6,17 +6,22 @@ import { AppComponent } from './app.component';
 import { LegacyAppUpgradeDirective } from './legacy/upgrade/legacy.app.component.upgrade';
 import './legacy/'; // imported so legacy files are bundled
 import { legacyApp } from './legacy/legacy.app.module';
+import { HelloNgComponent } from './hello-ng/hello-ng.component';
+import { AppRoutingModule } from './routing/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     // Import the upgraded legacyApp so Angular knows about it
     // and we can use it in our app component
-    LegacyAppUpgradeDirective
+    LegacyAppUpgradeDirective,
+    HelloNgComponent
   ],
   imports: [
     BrowserModule,
-    UpgradeModule // Add this so Angular can use the Upgrade module
+    // Add this so Angular can use the Upgrade module
+    UpgradeModule,
+    AppRoutingModule,
   ],
   providers: [],
   // VERY IMPORTANT to change this from `bootstrap` to `entryComponents`!
