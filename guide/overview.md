@@ -4,32 +4,29 @@ Have a read through the official [Angular Upgrade Docs](https://angular.io/guide
 
 At the end of this guide you should be able to set up a hybrid Angular 6+ and AngularJs (Angular 1.x) app with Angular Router and AngularJs UI-Router working nicely together.
 
-## 0. Scaffold New Project With Angular CLI
+Each part has an accociated commit in this repo. See [repo commits](https://github.com/BBlackwo/angular-router-angular-js-ui-router-hybrid/commits/master).
 
-```sh
-npx @angular/cli new your-project-name
-```
+## [Background](./background.md)
 
-## 1. Set Up Angular and AngularJs Hybrid App
+## [Part 1: Set Up Angular and AngularJs Hybrid App](./part-1.md)
 
-See [Part 1](./part-1.md)
+## [Part 2: Add UI Router With Config](./part-2.md)
 
-## 2. Add UI Router With Config
+## [Part 3: Add Angular Router With Config](./part-3.md)
 
-See [Part 2](./part-2.md)
+## [Part 4: Hacks To Get Hybrid Routing Working](./part-4.md)
 
-## 3. Add Angular Router With Config
+## Conclusion
 
 // ...
-
-## 4. Some Fun Hacks
-
-// ...
-
-Generate router service with Angular CLI...
 
 ## TODO
 
 - Generate TOC with <https://github.com/jonschlinkert/markdown-toc>
 - Note about legacy js files
 - Upgrade to Angular 7
+- Lazy loading route modules?
+- Background
+- Conclusion
+- Comment on http://www.syntaxsuccess.com/viewarticle/ngupgrade-with-the-angular-router-and-ui-router
+- What about all my js files that don't get transpiled?
