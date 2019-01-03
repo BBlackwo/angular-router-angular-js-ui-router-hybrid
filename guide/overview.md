@@ -16,17 +16,15 @@ Each part has an accociated commit in this repo. See [repo commits](https://gith
 
 ## [Part 4: Hacks To Get Hybrid Routing Working](./part-4.md)
 
-## Conclusion
-
-// ...
+## [Conclusion](./conclusion.md)
 
 ## TODO
 
 - Generate TOC with <https://github.com/jonschlinkert/markdown-toc>
-- Note about legacy js files
+- What about all my js files that don't get transpiled?
 - Upgrade to Angular 7
 - Lazy loading route modules?
 - Background
 - Conclusion
 - Comment on http://www.syntaxsuccess.com/viewarticle/ngupgrade-with-the-angular-router-and-ui-router
-- What about all my js files that don't get transpiled?
+- Duplicate base path? Might not be an issue anymore that was fixed in the latest setUpLocationSync. Or might need to ignore the base path when redirecting.

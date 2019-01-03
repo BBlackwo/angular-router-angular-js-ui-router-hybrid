@@ -1,5 +1,6 @@
 import { LegacyRouteHelper } from './legacy.route-helper';
 import { legacyApp } from '../legacy.app.module';
+import { routeHelper } from 'src/app/routing/route-helper';
 
 legacyApp.config(legacyRoutes);
 
@@ -17,9 +18,16 @@ function legacyRoutes($stateProvider, $urlRouterProvider) {
       `,
     });
 
-  $urlRouterProvider.otherwise(($injector) => {
-    const legacyRouteHelper: LegacyRouteHelper = $injector.get('legacyRouteHelper');
-    legacyRouteHelper.handleNgRoute();
+  $urlRouterProvider.otherwise(($injector, $location) => {
+    // If it's a valid Angular Route, Angular will handle it.
+    if (routeHelper.isValidRoute($location.path())) {
+      const legacyRouteHelper: LegacyRouteHelper = $injector.get('legacyRouteHelper');
+      return legacyRouteHelper.handleNgRoute();
+    }
+
+    // If it's not a valid route in Angular (or AngularJs cause we're in the $otherwise fn),
+    // redirect to our default page
+    $location.path('/hello-ng');
   });
 
 }
