@@ -1,9 +1,10 @@
+import { LegacyRouteHelper } from './legacy.route-helper';
 import { legacyApp } from '../legacy.app.module';
 
 legacyApp.config(legacyRoutes);
 
-legacyRoutes.$inject = ['$stateProvider'];
-function legacyRoutes($stateProvider) {
+legacyRoutes.$inject = ['$stateProvider', '$urlRouterProvider'];
+function legacyRoutes($stateProvider, $urlRouterProvider) {
 
   $stateProvider
     .state('helloAjs', {
@@ -14,5 +15,10 @@ function legacyRoutes($stateProvider) {
         </div>
       `,
     });
+
+  $urlRouterProvider.otherwise(($injector) => {
+    const legacyRouteHelper: LegacyRouteHelper = $injector.get('legacyRouteHelper');
+    legacyRouteHelper.handleNgRoute();
+  });
 
 }
