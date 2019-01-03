@@ -70,7 +70,55 @@ You should *now* be able to navigate to [/hello-ng](http://localhost:4200/hello-
 
 ## Clean Things Up
 
-Let's remove our headings and add a few links to be able to test some other scenarios we need to solve for.
+Let's remove our headings, apply the styles, and add a few links to be able to test some other scenarios we need to solve for.
+
+[legacy.routes.ts](../src/app/legacy/routing/legacy.routes.ts)
+
+```ts
+.state('helloAjs', {
+  url: '/hello-ajs',
+  template: `
+    <div class="comp ajs">
+      <h3>Hello from AngularJs Route</h3>
+      <a href="/hello-ng">Hello Ng</a>
+    </div>
+  `,
+});
+```
+
+[legacy.app.component.ts](../src/app/legacy/legacy.app.component.ts)
+
+```ts
+legacyApp.component(LEGACY_APP_COMP_SELECTOR, {
+  template: `<ui-view></ui-view>`,
+});
+```
+
+[hello-ng.component.html](../src/app/hello-ng/hello-ng.component.html)
+
+```html
+<div class="comp ng">
+  <h3>Hi from Angular</h3>
+  <a href="/hello-ajs">Hello Ajs</a>
+</div>
+```
+
+[app.component.html](../src/app/app.component.html)
+
+```html
+<div style="text-align:center">
+  <router-outlet></router-outlet>
+  <legacy-app-upgrade></legacy-app-upgrade>
+</div>
+```
+
+[index.html](../src/index.html)
+
+```html
+<body>
+  <app-root></app-root>
+</body>
+```
 
 ## Problem 2: Angular RouterOutlet Doesn't Clear
 
