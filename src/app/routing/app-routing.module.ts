@@ -1,18 +1,28 @@
-import { HelloNgComponent } from './../hello-ng/hello-ng.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { HelloNgComponent } from './../hello-ng/hello-ng.component';
+import { routeHelper } from './route-helper';
+
+@Component({selector: 'app-empty', template: ''})
+class EmptyComponent {}
+
 const routes: Routes = [
-  {
-    path: 'hello-ng',
-    component: HelloNgComponent
-  }
+  { path: 'hello-ng', component: HelloNgComponent },
+
+  // Has to be last once all the other routes haven't matched
+  { path: '**', component: EmptyComponent },
 ];
 
 @NgModule({
+  declarations: [EmptyComponent],
   imports: [RouterModule.forRoot(routes,
-    { enableTracing: true } // <-- For debugging purposes only. Should be turned off in prod.
+    { enableTracing: false } // <-- For debugging purposes only. Should be turned off in prod.
   )],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor() {
+    routeHelper.init(routes);
+  }
+}

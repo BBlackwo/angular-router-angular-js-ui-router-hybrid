@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 
 import { legacyApp } from '../legacy.app.module';
+import { routeHelper } from '../../../../src/app/routing/route-helper';
 
 export class LegacyRouteHelper {
   static $inject = [
@@ -15,6 +16,10 @@ export class LegacyRouteHelper {
   handleNgRoute(): void {
     const path = this.$location.path();
     path && this.router.navigateByUrl(path);
+  }
+
+  ajsShouldHandleRoute(): Boolean {
+    return !routeHelper.isValidRoute(this.$location.path());
   }
 }
 

@@ -1,3 +1,4 @@
+import { setUpLocationSync } from '@angular/router/upgrade/';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { UpgradeModule } from '@angular/upgrade/static';
@@ -33,9 +34,12 @@ export class AppModule {
 
   ngDoBootstrap() {
     // Once Angular bootstrap is complete then we manually bootstrap the AngularJS module
+    // Note: The AngualrJs bootstrapping could also be done in the `main.ts`. You may see others do it that way.
     this.upgrade.bootstrap(document.body, [legacyApp.name], { strictDi: true });
 
-    // Note: The AngualrJs bootstrapping could also be done in the `main.ts`.
-    // You may see others do it that way.
+    // From the docs:
+    // History.pushState does not fire onPopState, so the Angular location doesn't detect it.
+    // The workaround is to attach a location change listener
+    setUpLocationSync(this.upgrade);
   }
  }
