@@ -12,6 +12,7 @@ function legacyRoutes($stateProvider, $urlRouterProvider) {
       template: `
         <div class="comp ajs">
           <h3>Hello from AngularJs Route</h3>
+          <a href="/hello-ng">Hello Ng</a>
         </div>
       `,
     });

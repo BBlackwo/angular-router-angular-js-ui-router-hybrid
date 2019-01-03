@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+.comp {
+  margin: 5px;
+  padding: 5px;
+  border: dashed 2px;
+}
+.ng {
+  border-color: #FF2829;
+}
+.ajs {
+  border-color: #1C446D;
+}
