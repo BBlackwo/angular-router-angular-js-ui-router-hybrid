@@ -6,6 +6,8 @@ At the end of this guide you should be able to set up a hybrid Angular 6+ and An
 
 Each part has an accociated commit in this repo. See [repo commits](https://github.com/BBlackwo/angular-router-angular-js-ui-router-hybrid/commits/master).
 
+A note on naming: as per the [Branding Guidelines for Angular and AngularJS](https://blog.angularjs.org/2017/01/branding-guidelines-for-angular-and.html) when referring to Angular 1.x we say "AngularJs" and Angular 2+ is referred to as Angular.
+
 ## [Background](./background.md)
 
 ## [Part 1: Set Up Angular and AngularJs Hybrid App](./part-1.md)
@@ -22,9 +24,8 @@ Each part has an accociated commit in this repo. See [repo commits](https://gith
 
 - Generate TOC with <https://github.com/jonschlinkert/markdown-toc>
 - What about all my js files that don't get transpiled?
-- Upgrade to Angular 7
+- Upgrade to Ng 7 will also fix webpack-dev-server vulnerability
 - Lazy loading route modules?
-- Background
 - Conclusion
 - Comment on http://www.syntaxsuccess.com/viewarticle/ngupgrade-with-the-angular-router-and-ui-router
 - Duplicate base path? Might not be an issue anymore that was fixed in the latest setUpLocationSync. Or might need to ignore the base path when redirecting.

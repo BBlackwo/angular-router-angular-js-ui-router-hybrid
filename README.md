@@ -1,6 +1,6 @@
 # Angular Router AngularJs UI Router Hybrid
 
-This is a work in progress. See [guide/overview.md](./guide/overview.md) for more info.
+This repo is a [step by step guide](./guide/README.md) as well as a demo project on setting up a hybrid Angular Router and AngularJs UI Router hybrid app.
 
 ## Development server
 
