@@ -401,7 +401,7 @@ And for AngularJs you can just use a sink route as shown in **Alternative 1**.
 
 ## Next step
 
-Conclusion???
+[Conclusion](./conclusion.md)
 
 ## Further Reading
 
