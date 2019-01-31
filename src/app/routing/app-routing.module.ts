@@ -5,7 +5,7 @@ import { HelloNgComponent } from './../hello-ng/hello-ng.component';
 import { routeHelper } from './route-helper';
 
 @Component({selector: 'app-empty', template: ''})
-class EmptyComponent {}
+export class EmptyComponent {}
 
 const routes: Routes = [
   { path: 'hello-ng', component: HelloNgComponent },

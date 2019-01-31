@@ -20,12 +20,11 @@ A note on naming: as per the [Branding Guidelines for Angular and AngularJS](htt
 
 ## [Conclusion](./conclusion.md)
 
+## [Appendix 1: Angular CLI doesn't transpile js files](./appendix-1.md)
+
 ## TODO
 
-- Generate TOC with <https://github.com/jonschlinkert/markdown-toc>
-- What about all my js files that don't get transpiled?
 - Upgrade to Ng 7 will also fix webpack-dev-server vulnerability
 - Lazy loading route modules?
-- Conclusion - finish links
 - Comment on http://www.syntaxsuccess.com/viewarticle/ngupgrade-with-the-angular-router-and-ui-router
 - Duplicate base path? Might not be an issue anymore that was fixed in the latest setUpLocationSync. Or might need to ignore the base path when redirecting.
